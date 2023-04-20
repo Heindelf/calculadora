@@ -1,25 +1,26 @@
-var number1 = document.getElementById('number1').value
-var number2 = document.getElementById('number2').value
+var operador = document.getElementById("operando");
+const numero1 = document.getElementById("num1");
+const numero2 = document.getElementById("num2");
+const display = document.getElementById("display");
+const button = document.querySelector("#numero");
 
-const suma = document.getElementById('suma')
-const resta = document.getElementById('resta')
-const multiplicacion = document.getElementById('multiplicacion')
-const divison = document.getElementById('division')
-
-suma.addEventListener('click',function(){
-
-    var resultadosuma= parseInt(number1)+parseInt(number2)
-    alert("el resultado de la operacion es :"+resultadosuma)
-})
-
-resta.addEventListener('click',function(){
-    
-})
-
-multiplicacion.addEventListener('click',function(){
-    
-})
-
-division.addEventListener('click',function(){
-    
-})
+button.addEventListener("click", (e) => {
+  if ((e.target.id == "suma")) {
+    operador.textContent = "+";
+  }  
+  if ((e.target.id == "menos")) {
+    operador.textContent = "-";
+  }  
+  if ((e.target.id == "multi")) {
+    operador.textContent = "*";
+  }  
+  if ((e.target.id == "divi")) {
+    operador.textContent = "/";
+  }  
+  if ((e.target.id == "clear")) {
+    operador.textContent = "C";
+  } 
+    if ((e.target.id == "igual")) {
+    operador.textContent = "=";
+  }
+}); 
